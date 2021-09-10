@@ -1,0 +1,9 @@
+#The following config variables are according to what is needed by the pyowm library
+
+#OWM key
+OWM_KEY = 'YOUR OPEN WEATHER MAP API KEY GOES HERE'
+#Weather configuration
+CITY = 'Your City Name goes here'
+COUNTRYCODE = 'Your country code goes here'
+TEMP_UNIT = 'Your preferred temp unit goes here celsius/farenheit'
+
