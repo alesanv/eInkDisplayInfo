@@ -4,8 +4,7 @@ import requests
 
 
 class Stock:
-    def __init__(self, name, symbol):
-        self.name = name
+    def __init__(self, symbol):
         self.symbol = symbol
         self.price = 0.0
         self.getPrice()
@@ -14,7 +13,7 @@ class Stock:
     def getPrice(self):
         try:
             stock=self.symbol
-            url = 'https://finance.yahoo.com/quote/'+stock+'?p='+stock+'&.tsrc=fin-srch-v1'
+            url = f'https://finance.yahoo.com/quote/{stock}?p={stock}&.tsrc=fin-srch-v1'
             page = requests.get(url)
             soup = BeautifulSoup(page.text, 'lxml')
             self.price = soup.find('span',class_= 'Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)').text
