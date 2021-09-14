@@ -129,7 +129,11 @@ dmypy.json
 .pyre/
 
 
-#SECRETS
-Source/config.py
-config.py
 
+#logs
+Source/Logs/*.log
+*.log
+
+
+#Tests
+test.py
