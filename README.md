@@ -160,11 +160,11 @@ How it works:
     |----------------|------------------------------|
     | FONT           | Path to the Font file        |
     | IMG_BACKGROUND | Path to the background image |
-    | STOCK1         | Stock symbol #1              |
+    | STOCK1         | stock symbol #1              |
     | STOCK2         | stock symbol #2              |
     | STOCK3         | stock symbol #3              |
-    | CITY           | city name                    |
-    | COUNTRYCODE    | country code                 |
+    | CITY           | City name                    |
+    | COUNTRYCODE    | Country code                 |
     | TEMP_UNIT      | Celsius or Farenheit         |
 
 6. We need to export the OWM API key. We'll need to write the following line in the `~/.bashrc` file:
