@@ -17,8 +17,6 @@ The *goal* of this project is to show Stock and Weather information using a Rasp
 -	MicroSD Card.
 
 
-TODO: PICTURES!
-
 ---
 ## HARDWARE:
 
@@ -28,16 +26,20 @@ The Raspberry Pi Zero W has built-in WiFi, it is very small and cheap. It has a 
 
 You’ll have to install the Raspberry Pi OS into the MicroSD card, the directions can be found in the official Raspberry Pi website on [how to set up your SD Card](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/2).
 
+<img src="Images/RaspberryPiZeroW.jpg" width="500" height="800" />
+
 
 ### Pimoroni Inky pHAT:
 
 The Pimoroni Inky pHAT is a low-energy eInk display for the Raspberry Pi, it comes in three color schemes: red/black/white, yellow/black/white, and black/white. In this project I’m using a red/black/white display, it has a resolution of 212x104 pixels, there’s some later models with higher resolution (250x122 pixels). One of the features of eInk displays is that the image drawn on them persists even when no power is present. 
 
+![alt text](Images/Pimoroni-InkypHAT.jpg "Inky pHAT")
+
 
 It is a beautiful display, fully-assembled, the same size of the Raspberry Pi Zero W, and you’ll just need to insert the Inky pHAT into your Raspberry Pi and run Pimoroni’s installer to get everything set up. Pimoroni offers a getting started guide, a Python library, and several examples ready to use with your Inky pHAT (like a name badge display example). The official tutorial to get started with Inky pHAT can be found at [getting started with inky phat](https://learn.pimoroni.com/article/getting-started-with-inky-phat).
 
-TODO: 
-PIC of how it looks!!
+
+![alt text](Images/Raspi_with_inky.jpg "Inky pHAT attached to Raspberry Pi Zero W")
 
 ---
 ## SOFTWARE:
@@ -59,6 +61,7 @@ The following picture shows a diagram of what I was trying to accomplish:
 
 TODO: Photo of paper design
 
+![alt text](Images/Raspi_diagram.PNG "Diagram")
 
 ### Implementation:
 
@@ -77,7 +80,9 @@ How it works:
 2. Then we start our Beautiful Soup object indicating that it should parse the page through an XML parser.
 
 3. After getting all the HTML ready to use I need to look for the stock price, which is inside it somewhere. To get a specific item from a webpage a tag and a class are needed. To get them we can use the Developer Tools in our browser and then select an element in the page to inspect it. 
-TODO: PICTURE
+
+
+![alt text](Images/Raspi_YahooFinance_Stock.PNG "How to get Stock Price from Yahoo Finance webpage")
 
 4. After using Beautiful Soup to find that value in the HTML, the application has the stock price as shown in the site. 
 
@@ -85,7 +90,7 @@ TODO: PICTURE
 
 **Weather module:**
 
-I am using the Open Weather Map API (https://openweathermap.org/api).  To use the API you need to create an account because you will need the API key, there's a free tier. For this application the free subscription is enough. 
+I am using the [Open Weather Map API](https://openweathermap.org/api).  To use the API you need to create an account because you will need the API key, there's a free tier. For this application the free subscription is enough. 
 
 There is also a Python library called PyOWM which is a wrapper library for the Open Weather Map web API, so I am using it. 
 
@@ -125,6 +130,8 @@ How it works:
 5. Draw the date, IP, Stocks and Weather information.
 6. Update the eInk display.
 
+
+![alt text](Images/Raspi_eInkDisplay_Working.jpg "How it looks")
 
 ### Installing the Application in the Raspberry Pi:
 
@@ -212,6 +219,7 @@ Then finally I found out that `Thonny` allows to connect to the Raspberry Pi Zer
 
 So I would recommend to use Visual Studio to develop your code that does not depend on the display, that way you can easily debug and test that it works. Once that code is ready you can use Thonny to work on everything related to the Inky pHAT connecting your Pi to your computer. 
 
-Another problem was working on the background image. Pimoroni has all the information needed to create images compatible with the display, but they involve `Gimp` and it is really slow in the Raspberry Pi Zero W. That is why the background is very basic so far. Hopefully I can improve it in the future. 
+![alt text](Images/Raspi_PowerCable.jpg "Connect the power cable to the Computer and make your life easier")
+
 
 
