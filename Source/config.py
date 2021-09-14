@@ -11,6 +11,6 @@ COUNTRYCODE = # <Country code> Example: 'US'
 TEMP_UNIT = # <celsius or farenheit> Example: 'celsius'
 
 #Stocks
-STOCK1 = #Stock symbol #1 Example:'ETSY'
-STOCK2 = #Stock symbol #2 Example: 'TSLA'
-STOCK3 = #Stock symbol #3 Example: 'GME'
+STOCK1 = #<Stock symbol #1> Example:'ETSY'
+STOCK2 = #<Stock symbol #2> Example: 'TSLA'
+STOCK3 = #<Stock symbol #3> Example: 'GME'
