@@ -98,7 +98,7 @@ My original plans had the display showing the forecast for tomorrow, but since t
 
 
 There are some variables that will be taken from a configuration file. Those are:
--	Temperature units: Celsius or Farenheit
+-	Temperature units: Celsius or Fahrenheit
 -	City: City name
 -	Country: Country code
 
@@ -172,7 +172,7 @@ How it works:
     | STOCK3         | stock symbol #3              |
     | CITY           | City name                    |
     | COUNTRYCODE    | Country code                 |
-    | TEMP_UNIT      | Celsius or Farenheit         |
+    | TEMP_UNIT      | Celsius or Fahrenheit        |
 
 6. We need to export the OWM API key. We'll need to write the following line in the `~/.bashrc` file:
     ```bash
